@@ -1,0 +1,3 @@
+rootProject.name = "codogen"
+include ':app'
+include ':anzidannotation', ':anzidcodegeneration'
