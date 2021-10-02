@@ -2,7 +2,8 @@ apply plugin: 'kotlin'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.github.Fantastic12'
+group='com.github.anzid'
+
 kapt {
     generateStubs = true
 }
@@ -23,7 +24,10 @@ dependencies {
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     // configuration generator for service providers
-    implementation "com.google.auto.service:auto-service:1.0-rc4"
+    implementation ("com.google.auto.service:auto-service:1.0-rc4") {
+        exclude group: 'com.google.guava'
+    }
+
     kapt "com.google.auto.service:auto-service:1.0-rc4"
 }
 
