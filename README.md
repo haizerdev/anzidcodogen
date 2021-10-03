@@ -21,8 +21,8 @@ Add it in your root build.gradle at the end of repositories:
   Step 2. Add the dependency
 
 	dependencies {
-	     implementation 'com.github.Fantastic12:anzidcodogen:0.2'
-	     kapt 'com.github.Fantastic12:anzidcodogen:0.2'
+	     implementation 'com.github.haizerdev:anzidcodogen:0.3'
+	     kapt 'com.github.haizerdev:anzidcodogen:0.3'
 	}
 	
 Step 3. Please add the Kotlin-generated files folder to your source set. 
