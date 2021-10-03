@@ -1,8 +1,11 @@
 # Anzidcodogen
-Annotation proccessor for generate public observers
 [![](https://jitpack.io/v/haizerdev/anzidcodogen.svg)](https://jitpack.io/#haizerdev/anzidcodogen)
 
-Example 
+Annotation proccessor for generate public observers
+
+Supported annotation PublicSharedFlow, PublicLiveData, InternalSharedFlow, InternalLiveData
+
+Example:
 
 ![image](https://user-images.githubusercontent.com/46586567/135762439-e910d9ec-f226-4013-a3f7-76a333c95bdd.png)
 
