@@ -1,6 +1,6 @@
 # Anzidcodogen
 Annotation proccessor for generate public observers
-[![](https://jitpack.io/v/Fantastic12/anzidcodogen.svg)](https://jitpack.io/#Fantastic12/anzidcodogen)
+[![](https://jitpack.io/v/haizerdev/anzidcodogen.svg)](https://jitpack.io/#haizerdev/anzidcodogen)
 
 Example 
 
