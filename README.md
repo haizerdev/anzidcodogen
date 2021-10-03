@@ -23,12 +23,12 @@ The srcDir is the path to which the files were generated which was indicated by 
 If you do not add this block, you’ll be flagged by a method not found error message in the IDE.
 
     android {
-	  …
-	  sourceSets {
-	       main {
-                   java {
-                      srcDir "${buildDir.absolutePath}/generated/source/kaptKotlin/"
-                   }
-               }
-          }
+      ...
+         sourceSets {
+             main {
+                 java {
+                     srcDir "${buildDir.absolutePath}/generated/source/kaptKotlin/"
+                 }
+             }
+         }
     }
