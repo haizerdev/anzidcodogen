@@ -1,5 +1,6 @@
 val kspVersion: String by project
 val kotlinVersion: String by project
+val versionLib: String by project
 
 plugins {
     id("kotlin")
@@ -9,7 +10,7 @@ plugins {
 }
 
 group="com.github.anzid"
-version = "0.5-SNAPSHOT"
+version = versionLib
 
 repositories {
     mavenCentral()
