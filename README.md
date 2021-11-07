@@ -1,4 +1,4 @@
-# Anzidcodogen
+# Anzidcodogen quickstart
 [![](https://jitpack.io/v/haizerdev/anzidcodogen.svg)](https://jitpack.io/#haizerdev/anzidcodogen)
 
 Annotation proccessor for generate public observers(KSP implementation)
