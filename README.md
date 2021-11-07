@@ -3,7 +3,7 @@
 
 Annotation proccessor for generate public observers
 
-Supported annotation PublicSharedFlow, PublicLiveData, InternalSharedFlow, InternalLiveData
+Supported annotation PublicSharedFlow, PublicLiveData, PublicStateFlow
 
 Example:
 
