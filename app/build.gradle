@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'com.google.devtools.ksp' version "1.5.30-1.0.0"
 }
 
 android {
@@ -31,13 +32,25 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    sourceSets {
+        applicationVariants.all { variant ->
+            getByName(variant.name) {
+                java.srcDirs += "${buildDir.absolutePath}/generated/ksp/${variant.name}/kotlin"
+            }
+        }
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '6.7.1'
 }
 
 dependencies {
 
     implementation project(":anzidannotation")
-    kapt project(":anzidcodegeneration")
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    ksp project(":anzidcodegeneration")
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.30"
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
