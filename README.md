@@ -25,7 +25,7 @@ Add it in your root build.gradle at the end of repositories:
 
 	dependencies {
 	     implementation 'com.github.haizerdev:anzidcodogen:0.3'
-	     kapt 'com.github.haizerdev:anzidcodogen:0.3'
+	     ksp 'com.github.haizerdev:anzidcodogen:0.3'
 	}
 	
 Step 3. Please add the Kotlin-generated files folder to your source set. 
@@ -36,11 +36,11 @@ If you do not add this block, you’ll be flagged by a method not found error me
     android {
       ...
          sourceSets {
-             main {
-                 java {
-                     srcDir "${buildDir.absolutePath}/generated/source/kaptKotlin/"
-                 }
-             }
+              applicationVariants.all { variant ->
+                  getByName(variant.name) {
+                      java.srcDirs += "${buildDir.absolutePath}/generated/ksp/${variant.name}/kotlin"
+                  }
+              }
          }
     }
 
