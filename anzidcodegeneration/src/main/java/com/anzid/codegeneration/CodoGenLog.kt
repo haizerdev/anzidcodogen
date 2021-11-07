@@ -5,7 +5,7 @@ import java.io.FileWriter
 import java.io.IOException
 
 object CodoGenLog {
-    private const val LOG_FILE = "C:/dStar/codogen/logs.txt"
+    private const val LOG_FILE = "C:/anzid/codogen/logs.txt"
     private const val SEPARATION_LOG = "==================================================================="
 
     fun log(message: Any? = null, isSeparationLog: Boolean = false) {
@@ -18,20 +18,9 @@ object CodoGenLog {
 
     private fun writeToFile(message: String) {
         File(LOG_FILE).parentFile.mkdirs()
-        var writer: FileWriter? = null
-        try {
-            writer = FileWriter(LOG_FILE, true).apply {
-                append(message)
-                append("\n")
-                close()
-            }
-        } catch (e: IOException) {
-            e.printStackTrace()
-            try {
-                writer?.close()
-            } catch (ignored: IOException) {
-                ignored.printStackTrace()
-            }
+        FileWriter(LOG_FILE, true).use {
+            it.append(message)
+            it.append("\n")
         }
     }
 }
