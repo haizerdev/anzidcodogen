@@ -1,7 +1,8 @@
 # Anzidcodogen
 [![](https://jitpack.io/v/haizerdev/anzidcodogen.svg)](https://jitpack.io/#haizerdev/anzidcodogen)
 
-Annotation proccessor for generate public observers
+Annotation proccessor for generate public observers(KSP implementation)
+KSP integration doc - https://github.com/google/ksp/blob/main/docs/quickstart.md
 
 Supported annotation PublicSharedFlow, PublicLiveData, PublicStateFlow
 
