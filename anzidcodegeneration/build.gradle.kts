@@ -4,7 +4,6 @@ val versionLib: String by project
 
 plugins {
     id("kotlin")
-    id("kotlin-kapt")
     id("com.github.dcendents.android-maven")
     kotlin("jvm")
 }
@@ -29,14 +28,8 @@ dependencies {
 
     // Kotlin
     implementation ("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
-    // configuration generator for service providers
-    implementation ("com.google.auto.service:auto-service:1.0") {
-        exclude(group = "com.google.guava")
-    }
-
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
     implementation("com.google.devtools.ksp:symbol-processing-api:1.5.30-1.0.0-beta09")
-
-    kapt("com.google.auto.service:auto-service:1.0")
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
