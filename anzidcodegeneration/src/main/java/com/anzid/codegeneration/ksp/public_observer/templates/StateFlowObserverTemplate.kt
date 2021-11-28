@@ -14,9 +14,9 @@ internal class StateFlowObserverTemplate(model: ObserverData) : ObserverTemplate
             get() {
                  val observerPrivate = javaClass.getDeclaredField("${model.fieldName}") 
                  observerPrivate.isAccessible = true 
-                 val observer = observerPrivate.get(this) 
+                 val observer = observerPrivate.get(this) as ${model.originalType}
                  
-                 return (observer as ${model.originalType}).asStateFlow()
+                 return PublicObserverUtils.asStateFlow(observer) as ${model.publicType}
             }
         
     """.trimIndent()

@@ -28,7 +28,6 @@ dependencies {
 
     // Kotlin
     implementation ("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
     implementation("com.google.devtools.ksp:symbol-processing-api:1.5.30-1.0.0-beta09")
 }
 

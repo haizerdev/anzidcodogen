@@ -19,10 +19,8 @@ internal open class ObserverTemplate(protected val model: ObserverData) {
         |
         |import com.anzid.annotation.AnzidGenerationCode
         |import androidx.lifecycle.LiveData
-        |import kotlinx.coroutines.flow.SharedFlow
-        |import kotlinx.coroutines.flow.StateFlow
-        |import kotlinx.coroutines.flow.asSharedFlow
-        |import kotlinx.coroutines.flow.asStateFlow
+        |import kotlinx.coroutines.flow.*
+        |import com.anzid.annotation.PublicObserverUtils
         |
         |${getAdditionalContent()}
     """.trimMargin()
