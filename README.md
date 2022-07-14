@@ -26,8 +26,8 @@ Add it in your root build.gradle at the end of repositories:
   Step 2. Add the dependency
 
 	dependencies {
-	     implementation 'com.github.haizerdev:anzidcodogen:1.0-beta01'
-	     ksp 'com.github.haizerdev:anzidcodogen:1.0-beta01'
+	     implementation 'com.github.haizerdev:anzidcodogen:1.0.0'
+	     ksp 'com.github.haizerdev:anzidcodogen:1.0.0'
 	}
 	
 Step 3. Please add the Kotlin-generated files folder to your source set. 
