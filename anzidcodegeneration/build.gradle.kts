@@ -11,6 +11,18 @@ plugins {
 group="com.github.anzid"
 version = versionLib
 
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.github.anzid"
+            artifactId = "anzidcodogeneration"
+            version = version
+
+            from(components["kotlin"])
+        }
+    }
+}
+
 repositories {
     mavenCentral()
 }

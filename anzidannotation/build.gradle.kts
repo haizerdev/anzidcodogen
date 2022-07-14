@@ -9,6 +9,18 @@ plugins {
 group="com.github.anzid"
 version = versionLib
 
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.github.anzid"
+            artifactId = "anzidannotation"
+            version = version
+
+            from(components["kotlin"])
+        }
+    }
+}
+
 dependencies {
     // Kotlin
     implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
