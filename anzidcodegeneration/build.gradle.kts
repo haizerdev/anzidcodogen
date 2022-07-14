@@ -4,7 +4,7 @@ val versionLib: String by project
 
 plugins {
     id("kotlin")
-    id("com.github.dcendents.android-maven")
+    id("maven-publish")
     kotlin("jvm")
 }
 
@@ -23,12 +23,12 @@ dependencies {
     implementation(project(":anzidannotation"))
     compileOnly(project(":anzidannotation"))
 
-    implementation("com.squareup:kotlinpoet:1.10.1")
-    implementation("com.squareup:kotlinpoet-ksp:1.10.1")
+    implementation("com.squareup:kotlinpoet:1.11.0")
+    implementation("com.squareup:kotlinpoet-ksp:1.11.0")
 
     // Kotlin
     implementation ("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
-    implementation("com.google.devtools.ksp:symbol-processing-api:1.5.30-1.0.0-beta09")
+    implementation("com.google.devtools.ksp:symbol-processing-api:$kspVersion")
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
